@@ -20,6 +20,11 @@ import java.util.List;
 @Transactional
 public class LuckyDrawService {
 
+    /**
+     * Service for assigning raffle ticket, making user participate in an event, calculate winner,
+     * get Winners Of Past Week, get Next Event's Timing And Prize.
+     */
+
     @Autowired
     UserRepository userRepository;
 

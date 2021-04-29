@@ -13,6 +13,9 @@ import java.util.Optional;
 @Transactional
 public class EventService {
 
+    /**
+     * Service for Events handling - creating, finding events, find event by Id
+     */
     @Autowired
     private final EventRepository eventRepository;
 

@@ -14,6 +14,9 @@ import java.util.Optional;
 @Transactional
 public class UserService {
 
+    /**
+     * Service for Events handling - creating, finding users, finding user by Id
+     */
 
     @Autowired
     private final UserRepository userRepository;
