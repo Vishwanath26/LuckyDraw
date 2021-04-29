@@ -77,4 +77,5 @@ public class User {
     public void setEventsParticipated(List<Long> eventsParticipated) {
         this.eventsParticipated = eventsParticipated;
     }
+
 }
