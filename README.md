@@ -7,7 +7,7 @@
   as it is used as databse
 
 # Algorithm
-  Using random function of on array index of participant's list of a lucky draw event to find winner.
+  Using Math.random function on array index of participant's list of a lucky draw event to find winner.
 
 # Structure
  Backend is made using Java Spring Boot framework(with JPA)
