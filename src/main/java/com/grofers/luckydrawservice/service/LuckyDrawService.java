@@ -6,6 +6,8 @@ import com.grofers.luckydrawservice.models.Event;
 import com.grofers.luckydrawservice.models.User;
 import com.grofers.luckydrawservice.repos.EventRepository;
 import com.grofers.luckydrawservice.repos.UserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +25,8 @@ public class LuckyDrawService {
 
     @Autowired
     EventRepository eventRepository;
+
+    private static final Logger logger= LoggerFactory.getLogger(LuckyDrawService.class);
 
     public LuckyDrawService(UserRepository userRepository) {
         this.userRepository = userRepository;
@@ -72,7 +76,7 @@ public class LuckyDrawService {
 
         //In case event's winner had been calculated earlier
         if (event.getWinnerId() != null) {
-            System.out.println("Winner has already been calculated");
+            logger.info("Winner has already been calculated");
             return userRepository.findByUserId(event.getWinnerId());
         }
 
@@ -99,7 +103,7 @@ public class LuckyDrawService {
                 winnersOfEventsInPastWeek.add(new WinnersOfPastWeek(event.getEventName(), winner.getUserName()));
         }
         if (winnersOfEventsInPastWeek.isEmpty()) {
-            System.out.println("No events in past week");
+            logger.info("No events in past week");
         }
         return winnersOfEventsInPastWeek;
     }
