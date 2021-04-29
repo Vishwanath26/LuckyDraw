@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @org.springframework.web.bind.annotation.RestController
-public class RESTController {
+public class LuckyDrawController {
 
     @Autowired
     private LuckyDrawService luckyDrawService;
