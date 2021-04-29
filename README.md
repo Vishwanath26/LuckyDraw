@@ -9,8 +9,9 @@
 # Algorithm
   Using random function of on array index of participant's list of a lucky draw event to find winner.
 
-#Structure
+# Structure
  Backend is made using Java Spring Boot framework(with JPA)
+ 
     1 - Controller - There are 3 controllers - 
       a) UserController - Assigns requests to service layer for saving new user, getting user/s etc.
       b) EventController - Assigns requests to service layer for saving new event, getting event/s etc.
@@ -31,10 +32,10 @@
         b) UserService - This service provides methods for saving new user, getting user/s etc.
         c) LuckyDrawService - This service provides methods for assigning raffle ticket, making user participate in an event, calculate winner etc.
         
-#Corner-Case
+# Corner-Case
  Once a user has participated with a raffle ticket, he/she shouldn’t be able to participate again in the same event.
   
-#Thanks
+# Thanks
   
 
       
